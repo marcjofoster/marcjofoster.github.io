@@ -10,8 +10,8 @@
   <style>
     body {
       font-family: Helvetica, Arial, sans-serif;
-      text-align: center;
       margin-top: 50px;
+      text-align: center;
     }
 
     img {
@@ -23,46 +23,43 @@
 
     h1 {
       color: #333;
-    }
-
-    p {
-      font-size: 2em;
-      color: #555;
-      text-align: center; /* Justify text for all paragraphs */
-      margin: 0 auto;
-      max-width: 800px; /* Optionally limit the width of paragraphs */
-    }
-
-    m {
-      font-size: 1.2em;
-      color: #555;
-      text-align: justify; /* Justify text for all paragraphs */
-      margin: 0 auto;
-      max-width: 800px; /* Optionally limit the width of paragraphs */
-    }
-
-    i {
-      font-size: 1.2em;
-      color: #008000;
-      text-align: justify; /* Justify text for all paragraphs */
-      margin: 0 auto;
-      max-width: 800px; /* Optionally limit the width of paragraphs */
+      font-size: 2em; /* Larger font for the title */
+      text-align: center;
     }
 
     .title {
-      font-size: 1.5em;
-      color: #777;
+      font-size: 1.6em; /* Slightly larger title */
+      color: #333;
+      text-align: center; /* Center the title */
     }
 
-    a {
-      font-size: 1.2em;
+    p {
+      font-size: 1.2em; /* Set the base font size */
       color: #555;
-      text-decoration: none;
-      margin-top: 20px;
-      display: block;
+      text-align: justify; /* Justify text */
+      margin: 0 auto;
+      max-width: 800px;
     }
 
-    a:hover {
+    /* Links inside paragraphs are colored green */
+    p a {
+      color: #008000;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    p a:hover {
+      text-decoration: underline;
+    }
+
+    /* Links for titles or other references */
+    .desiree-link, .richmond-link, .contact-link {
+      color: #008000;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .desiree-link:hover, .richmond-link:hover, .contact-link:hover {
       text-decoration: underline;
     }
 
@@ -78,6 +75,18 @@
       height: 30px;
       border: none;
     }
+
+    a {
+      font-size: 1.2em;
+      color: #555;
+      text-decoration: none;
+      margin-top: 20px;
+      display: block;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -92,9 +101,9 @@
   <p>Environmental Chemistry</p>
 
   <!-- Description -->
-  <m>Hi! My name is Marc Foster. I am a fourth year Ph.D. candidate in the MIT/WHOI Joint Program. I work with <i href="https://scholar.google.com/citations?user=frpKM2EAAAAJ&hl=en" target="_blank">Dr. Desirée Plata</i> in the Civil and Environmental Engineering department at MIT. My work focuses on understanding the microbiology of polymer biodegradation. My interests are interdisciplinary but span environmental chemistry, biogeochemistry, and microbiology. I have previously received a Masters of Science in physical chemistry from the University of Oregon where I worked with <i href="https://scholar.google.com/citations?user=hPWTDRQAAAAJ&hl=en" target="_blank">Dr. Geraldine Richmond</i>. I received my Bachelors of Arts in Biochemistry, Biophysics, and Molecular Biology from Whitman College. <i href="mailto:fosterm@mit.edu">Contact me here</i> if you would like to get in touch!</m>
+  <p>Hi! My name is Marc Foster. I am a fourth-year Ph.D. candidate in the MIT/WHOI Joint Program. I work with <a href="https://scholar.google.com/citations?user=frpKM2EAAAAJ&hl=en" class="desiree-link" target="_blank">Dr. Desirée Plata</a> in the Civil and Environmental Engineering department at MIT. My work focuses on understanding the microbiology of polymer biodegradation. My interests are interdisciplinary but span environmental chemistry, biogeochemistry, and microbiology. I have previously received a Masters of Science in physical chemistry from the University of Oregon where I worked with <a href="https://scholar.google.com/citations?user=hPWTDRQAAAAJ&hl=en" class="richmond-link" target="_blank">Dr. Geraldine Richmond</a>. I received my Bachelors of Arts in Biochemistry, Biophysics, and Molecular Biology from Whitman College. <a href="mailto:fosterm@mit.edu" class="contact-link">Contact me here</a> if you would like to get in touch!</p>
 
-  <m>Outside of lab I like to <i href=" https://www.strava.com/athletes/29012833" target="_blank">train for half-marathons</i>, swim (mostly when I am injured), hike, cook, bake, <i href="https://www.goodreads.com/user/show/164854933-marc-foster" target="_blank">read</i>, and hang with my <i href="momo.png" target="_blank">cat</i>.</m>
+  <p>Outside of lab I like to <a href="https://www.strava.com/athletes/29012833" target="_blank">train for half-marathons</a>, swim (mostly when I am injured), hike, cook, bake, <a href="https://www.goodreads.com/user/show/164854933-marc-foster" target="_blank">read</a>, and hang with my <a href="momo.png" target="_blank">cat</a>.</p>
 
   <!-- Social Media Links -->
   <div class="social-icons">

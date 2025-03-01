@@ -12,28 +12,29 @@
       font-family: Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f7f7f7;
+      text-align: center;
     }
 
     .container {
+      display: flex; /* Enable flexbox layout */
+      align-items: center; /* Align items vertically in the center */
+      justify-content: center; /* Center the container horizontally */
+      flex-direction: column; /* Arrange content vertically */
+      max-width: 1200px; /* Max container width */
+      margin: 0 auto; /* Center the container */
+    }
+
+    /* Image and text container with side-by-side layout */
+    .profile {
       display: flex;
+      align-items: center;
       justify-content: center;
-      align-items: flex-start;
-      flex-direction: column;
-      text-align: center;
-      max-width: 1200px;
+      margin-top: 20px;
     }
 
     .image-container {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 20px;
+      flex: 0 0 200px; /* Set fixed width for the image container */
+      margin-right: 20px; /* Space between image and text */
     }
 
     img {
@@ -43,62 +44,54 @@
       border-radius: 0;
     }
 
+    .text-container {
+      flex: 1; /* Allow the text to take the remaining space */
+      text-align: left;
+    }
+
     h1 {
-      position: absolute;
-      top: -40px; /* Move the name above the image */
       color: #333;
-      font-size: 2em;
-      text-align: center;
-      margin: 0;
+      font-size: 2em; /* Larger font for the name */
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 1.3em; /* Slightly larger title */
+      color: #333;
+    }
+
+    p {
+      font-size: 1.2em; /* Set the base font size for the paragraph */
+      color: #555;
+      text-align: justify; /* Justify text */
+      margin: 0 auto;
+      max-width: 800px;
+      line-height: 1.5;
+    }
+
+    /* Links inside paragraphs should stay inline and have green color */
+    p a {
+      color: #008000; /* Green color for links */
+      font-size: inherit; /* Ensure links have the same font size as paragraph */
+      text-decoration: none;
+      display: inline; /* Prevent links from breaking into new lines */
+    }
+
+    p a:hover {
+      text-decoration: underline;
     }
 
     .social-icons {
-      position: absolute;
-      bottom: -40px; /* Move the social icons below the image */
       display: flex;
       justify-content: center;
       gap: 20px;
-      margin: 0;
+      margin-top: 20px;
     }
 
     .social-icons img {
       width: 30px;
       height: 30px;
       border: none;
-    }
-
-    .text-container {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      margin-left: 30px; /* Space between image and text */
-    }
-
-    .title {
-      font-size: 1.3em;
-      color: #333;
-      text-align: center;
-      margin: 0;
-    }
-
-    p {
-      font-size: 1.2em;
-      color: #555;
-      text-align: justify;
-      margin: 0 auto;
-      max-width: 800px;
-      line-height: 1.5;
-    }
-
-    p a {
-      color: #008000;
-      font-size: inherit;
-      text-decoration: none;
-      display: inline;
-    }
-
-    p a:hover {
-      text-decoration: underline;
     }
 
     a {
@@ -116,31 +109,21 @@
 </head>
 <body>
 
-  <!-- Container for the profile and text -->
+  <!-- Container for all content -->
   <div class="container">
 
-    <!-- Image container -->
-    <div class="image-container">
-      <img src="IMG_0176.jpg" alt="Marc Foster">
+    <!-- Name centered above the image -->
+    <h1>Marc Foster</h1>
 
-      <!-- Name centered above the image -->
-      <h1>Marc Foster</h1>
-
-      <!-- Social media icons centered below the image -->
-      <div class="social-icons">
-        <a href="https://scholar.google.com/citations?user=O4dazRoAAAAJ&hl=en" target="_blank">
-          <img src="Google_Scholar_logo.png" alt="Google Scholar">
-        </a>
-        <a href="https://www.linkedin.com/in/marc-foster-238a35102/" target="_blank">
-          <img src="LinkedIn_logo_initials.png" alt="LinkedIn">
-        </a>
-        <a href="Marc_Foster_CV_2025.pdf" target="_blank">CV</a>
+    <!-- Profile Image and Text Content Container -->
+    <div class="profile">
+      <!-- Image Container -->
+      <div class="image-container">
+        <img src="IMG_0176.jpg" alt="Marc Foster">
       </div>
-    </div>
 
-    <!-- Text container with the description and other details -->
-    <div class="text-container">
-      <div>
+      <!-- Text Content -->
+      <div class="text-container">
         <p class="title">Ph.D. Candidate</p>
         <p class="title">Massachusetts Institute of Technology - Woods Hole Oceanographic Institution</p>
         <p class="title">Environmental Chemistry</p>
@@ -152,9 +135,19 @@
       </div>
     </div>
 
+    <!-- Social Media Links Centered below the image -->
+    <div class="social-icons">
+      <a href="https://scholar.google.com/citations?user=O4dazRoAAAAJ&hl=en" target="_blank">
+        <img src="Google_Scholar_logo.png" alt="Google Scholar">
+      </a>
+      <a href="https://www.linkedin.com/in/marc-foster-238a35102/" target="_blank">
+        <img src="LinkedIn_logo_initials.png" alt="LinkedIn">
+      </a>
+      <a href="Marc_Foster_CV_2025.pdf" target="_blank">CV</a>
+    </div>
+
   </div>
 
 </body>
 </html>
-
 

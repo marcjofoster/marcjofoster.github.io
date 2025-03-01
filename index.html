@@ -12,21 +12,20 @@
       font-family: Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 0;
-      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
+      height: 100vh;
       background-color: #f7f7f7;
     }
 
     .container {
-      position: relative;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       flex-direction: column;
-      height: 100%;
+      text-align: center;
+      max-width: 1200px;
     }
 
     .image-container {
@@ -34,6 +33,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-bottom: 20px;
     }
 
     img {
@@ -45,23 +45,16 @@
 
     h1 {
       position: absolute;
-      top: -30px; /* Moves the name above the image */
+      top: -40px; /* Move the name above the image */
       color: #333;
       font-size: 2em;
       text-align: center;
       margin: 0;
     }
 
-    .title {
-      font-size: 1.3em;
-      color: #333;
-      text-align: center;
-      margin: 0;
-    }
-
     .social-icons {
       position: absolute;
-      bottom: -40px; /* Moves the social icons below the image */
+      bottom: -40px; /* Move the social icons below the image */
       display: flex;
       justify-content: center;
       gap: 20px;
@@ -72,6 +65,20 @@
       width: 30px;
       height: 30px;
       border: none;
+    }
+
+    .text-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-left: 30px; /* Space between image and text */
+    }
+
+    .title {
+      font-size: 1.3em;
+      color: #333;
+      text-align: center;
+      margin: 0;
     }
 
     p {
@@ -109,17 +116,17 @@
 </head>
 <body>
 
-  <!-- Container for content -->
+  <!-- Container for the profile and text -->
   <div class="container">
 
-    <!-- Profile Picture Container -->
+    <!-- Image container -->
     <div class="image-container">
       <img src="IMG_0176.jpg" alt="Marc Foster">
-      
-      <!-- Name at the top of the image -->
+
+      <!-- Name centered above the image -->
       <h1>Marc Foster</h1>
 
-      <!-- Social Media Links at the bottom of the image -->
+      <!-- Social media icons centered below the image -->
       <div class="social-icons">
         <a href="https://scholar.google.com/citations?user=O4dazRoAAAAJ&hl=en" target="_blank">
           <img src="Google_Scholar_logo.png" alt="Google Scholar">
@@ -131,21 +138,23 @@
       </div>
     </div>
 
-    <!-- Other content (titles and descriptions) -->
-    <p class="title">Ph.D. Candidate</p>
-    <p class="title">Massachusetts Institute of Technology - Woods Hole Oceanographic Institution</p>
-    <p class="title">Environmental Chemistry</p>
-    
-    <!-- Description -->
-    <p>Hi! My name is Marc Foster. I am a fourth-year Ph.D. candidate in the MIT/WHOI Joint Program. I work with <a href="https://scholar.google.com/citations?user=frpKM2EAAAAJ&hl=en" target="_blank">Dr. Desirée Plata</a> in the Civil and Environmental Engineering department at MIT. My work focuses on understanding the microbiology of polymer biodegradation. My interests are interdisciplinary and span environmental chemistry, biogeochemistry, and microbiology. I have previously received a Masters of Science in physical chemistry from the University of Oregon where I worked with <a href="https://scholar.google.com/citations?user=hPWTDRQAAAAJ&hl=en" target="_blank">Dr. Geraldine Richmond</a>. I received my Bachelors of Arts in Biochemistry, Biophysics, and Molecular Biology from Whitman College. <a href="mailto:fosterm@mit.edu">Contact me here</a> if you would like to get in touch!</p>
-    
-    <br>
-    <p>Outside of lab I like to <a href="https://www.strava.com/athletes/29012833" target="_blank">train for half-marathons</a>, swim (mostly when I am injured), hike, cook, bake, <a href="https://www.goodreads.com/user/show/164854933-marc-foster" target="_blank">read</a>, and hang with my <a href="momo.png" target="_blank">cat</a>.</p>
+    <!-- Text container with the description and other details -->
+    <div class="text-container">
+      <div>
+        <p class="title">Ph.D. Candidate</p>
+        <p class="title">Massachusetts Institute of Technology - Woods Hole Oceanographic Institution</p>
+        <p class="title">Environmental Chemistry</p>
+
+        <p>Hi! My name is Marc Foster. I am a fourth-year Ph.D. candidate in the MIT/WHOI Joint Program. I work with <a href="https://scholar.google.com/citations?user=frpKM2EAAAAJ&hl=en" target="_blank">Dr. Desirée Plata</a> in the Civil and Environmental Engineering department at MIT. My work focuses on understanding the microbiology of polymer biodegradation. My interests are interdisciplinary and span environmental chemistry, biogeochemistry, and microbiology. I have previously received a Masters of Science in physical chemistry from the University of Oregon where I worked with <a href="https://scholar.google.com/citations?user=hPWTDRQAAAAJ&hl=en" target="_blank">Dr. Geraldine Richmond</a>. I received my Bachelors of Arts in Biochemistry, Biophysics, and Molecular Biology from Whitman College. <a href="mailto:fosterm@mit.edu">Contact me here</a> if you would like to get in touch!</p>
+
+        <br>
+        <p>Outside of lab I like to <a href="https://www.strava.com/athletes/29012833" target="_blank">train for half-marathons</a>, swim (mostly when I am injured), hike, cook, bake, <a href="https://www.goodreads.com/user/show/164854933-marc-foster" target="_blank">read</a>, and hang with my <a href="momo.png" target="_blank">cat</a>.</p>
+      </div>
+    </div>
 
   </div>
 
 </body>
 </html>
-
 
 
